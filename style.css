@@ -1,0 +1,192 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    font-family: 'Poppins', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+  }
+
+:root {
+    font-size: 62.5%;
+}
+  
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+
+.wrapper {
+    width: min(50rem, 100%);
+    margin-inline: auto;
+
+    padding-inline: 2.4rem;
+}
+
+body {
+    background: #D8D8D8;
+    background: radial-gradient(at center, #D8D8D8, #F8F8F8);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+#links header img {
+    width: 20rem;
+}
+
+#links header p {
+    font-size: 1.6rem;
+}
+
+#links header h1 {
+    font-size: 3rem;
+}
+
+#links header {
+    margin-bottom: 5rem;
+}
+
+#links .cards {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+#links .cards .card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem;
+    width: 32rem;
+    border-radius: 2rem;
+    box-shadow: 2px 2px 20px #0f0f0f;
+
+    position: relative;
+
+    transition: all 200ms ease-in;
+}
+
+#links .cards .card:hover {
+    transform: rotate(2deg);
+    cursor: pointer;
+}
+
+#links .cards .card .image img {
+    position: absolute;
+    top: 0;
+    filter: drop-shadow(8px 8px 45px #0f0f0f);
+}
+
+#links .cards .card .image img.whatsapp {
+    width: 11rem;
+    left: -2rem;
+}
+
+#links .cards .card .image img.site {
+    width: 20rem;
+    top: -2rem;
+    left: -7rem;
+    transform: rotate(-10deg);
+}
+
+#links .cards .card.contato {
+    background-image: url(./assets/background\ time.jpg);
+    background-size: cover;
+}
+
+#links .cards .card.site {
+    background-image: url(./assets/background\ site.jpg);
+    background-size: cover;
+}
+
+#links .cards .card img.whatsapp {
+    width: 5rem;
+}
+
+#links .cards .card img.site {
+    width: 10rem;
+}
+
+#links .cards .card .text {
+    text-align: end;
+}
+
+#links .cards .card .text h2 {
+    color: #D8D8D8;
+    font-size: 2.2rem;
+    margin-bottom: .5rem;
+}
+
+#links .cards .card .text button {
+    border: none;
+    border-radius: 1rem;
+    padding: 1rem 2rem;
+    font-weight: 400;
+    color: #ffffff9d;
+
+    /* From https://css.glass */
+    background: rgba(255, 255, 255, 0.137);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    border: 1px solid rgba(255, 255, 255, 0.29);
+
+    transition: all 200ms ease-in-out;
+}
+
+#links .cards .card .text button:hover {
+    background: rgba(255, 255, 255, 0.288);
+    color: #ffffffb4;
+    cursor: pointer;
+}
+
+@media (min-width: 1080px) {
+    .wrapper {
+        width: min(150rem, 100%);
+    }   
+
+    section#links .cards {
+        gap: 4rem;
+    }
+
+    section#links .cards .card {
+        width: 50rem;
+        justify-content: center;
+    }
+
+    section#links .cards .card .text {
+        text-align: center;
+        margin-right: -15rem;
+    }
+
+    section#links .cards .card .text h2 {
+        font-size: 2.5rem;
+    }
+
+    section#links .cards .card .text button {
+        font-size: 1.6rem;
+        padding: .8rem 1.5rem;
+    }
+
+    section#links .cards .card .image img.whatsapp {
+        width: 15rem;
+        top: -3rem;
+    }
+
+    section#links .cards .card .image img.site {
+        width: 28rem;
+        top: -5rem;
+    }
+}
