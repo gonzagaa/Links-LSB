@@ -11,7 +11,7 @@ html {
   }
 
 :root {
-    font-size: 62.5%;
+    font-size: 50.5%;
 }
   
 html,
@@ -41,6 +41,10 @@ body {
     align-items: center;
     flex-direction: column;
     text-align: center;
+}
+
+#links {
+    margin-top: 10rem;
 }
 
 #links header img {
