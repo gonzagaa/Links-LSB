@@ -32,10 +32,10 @@ a {
 }
 
 body {
-    background-image: url(./assets/Group\ 3\ \(1\).png);
     background-size: cover;
     background-position-x: 50%;
 
+    background: radial-gradient(#fff, #c4c4c4);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -43,21 +43,18 @@ body {
     text-align: center;
 }
 
-#links {
-    margin-top: 10rem;
-}
-
 #links header img {
-    width: 20rem;
+    width: 30rem;
+    margin-bottom: 5rem;
 }
 
 #links header p {
     font-size: 1.6rem;
-    color: #D8D8D8;
+    color: #111111;
 }
 
 #links header h1 {
-    color: #D8D8D8;
+    color: #111111;
     font-size: 3rem;
 }
 
@@ -78,18 +75,15 @@ body {
     padding: 2rem;
     width: 32rem;
     border-radius: 2rem;
-    box-shadow: 2px 2px 20px #0f0f0f;
-
     position: relative;
-
     transition: all 200ms ease-in;
 
-    background: rgba(0, 0, 0, 0.192);
+    background: rgba(173, 173, 173, 0.192);
     padding: 1rem;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 7px 30px rgba(0, 0, 0, 0.2);
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(14.3px);
-    border: 2px solid #94f1084d;
+    border: 2px solid #2741004d;
 }
 
 #links .cards .card:hover {
@@ -99,12 +93,12 @@ body {
 
 #links .cards .card .image .whatsapp,
 #links .cards .card .image .site {
-    font-size: 8rem;
+    font-size: 6rem;
     left: -2rem;
-    color: #F8F8F8;
+    color: #c0c0c0;
 
     position: absolute;
-    top: -2.5rem;
+    top: -1.6rem;
 
     /* From https://css.glass */
     background: rgba(0, 0, 0, 0.63);
@@ -117,8 +111,9 @@ body {
 }
 
 #links .cards .card .text h2 {
-    color: #D8D8D8;
+    color: #111111;
     font-size: 2.2rem;
+    font-weight: 500;
 }
 
 @media (min-width: 1080px) {
@@ -141,7 +136,7 @@ body {
 
     section#links .cards .card .text {
         text-align: center;
-        margin-right: -7rem;
+        margin-right: -5rem;
     }
 
     section#links .cards .card .text h2 {
@@ -150,7 +145,7 @@ body {
 
     section#links .cards .card .image .whatsapp,
     section#links .cards .card .image .site {
-        font-size: 10rem;
-        top: -3rem;
+        font-size: 7rem;
+        top: -2rem;
     }
 }
