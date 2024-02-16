@@ -32,8 +32,9 @@ a {
 }
 
 body {
-    background: #D8D8D8;
-    background: radial-gradient(at center, #D8D8D8, #F8F8F8);
+    background-image: url(./assets/Group\ 3\ \(1\).png);
+    background-size: cover;
+    background-position-x: 50%;
 
     display: flex;
     justify-content: center;
@@ -48,9 +49,11 @@ body {
 
 #links header p {
     font-size: 1.6rem;
+    color: #D8D8D8;
 }
 
 #links header h1 {
+    color: #D8D8D8;
     font-size: 3rem;
 }
 
@@ -61,13 +64,13 @@ body {
 #links .cards {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 5rem;
 }
 
 #links .cards .card {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-evenly;
     padding: 2rem;
     width: 32rem;
     border-radius: 2rem;
@@ -76,6 +79,13 @@ body {
     position: relative;
 
     transition: all 200ms ease-in;
+
+    background: rgba(0, 0, 0, 0.192);
+    padding: 1rem;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(14.3px);
+    border: 2px solid #94f1084d;
 }
 
 #links .cards .card:hover {
@@ -83,73 +93,28 @@ body {
     cursor: pointer;
 }
 
-#links .cards .card .image img {
-    position: absolute;
-    top: 0;
-    filter: drop-shadow(8px 8px 45px #0f0f0f);
-}
-
-#links .cards .card .image img.whatsapp {
-    width: 11rem;
+#links .cards .card .image .whatsapp,
+#links .cards .card .image .site {
+    font-size: 8rem;
     left: -2rem;
-}
+    color: #F8F8F8;
 
-#links .cards .card .image img.site {
-    width: 20rem;
-    top: -2rem;
-    left: -7rem;
-    transform: rotate(-10deg);
-}
+    position: absolute;
+    top: -2.5rem;
 
-#links .cards .card.contato {
-    background-image: url(./assets/background\ time.jpg);
-    background-size: cover;
-}
-
-#links .cards .card.site {
-    background-image: url(./assets/background\ site.jpg);
-    background-size: cover;
-}
-
-#links .cards .card img.whatsapp {
-    width: 5rem;
-}
-
-#links .cards .card img.site {
-    width: 10rem;
-}
-
-#links .cards .card .text {
-    text-align: end;
+    /* From https://css.glass */
+    background: rgba(0, 0, 0, 0.63);
+    border-radius: 50%;
+    padding: 1rem;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.404);
+    backdrop-filter: blur(14.3px);
+    -webkit-backdrop-filter: blur(14.3px);
+    border: 1px solid rgba(0, 0, 0, 0.3);
 }
 
 #links .cards .card .text h2 {
     color: #D8D8D8;
     font-size: 2.2rem;
-    margin-bottom: .5rem;
-}
-
-#links .cards .card .text button {
-    border: none;
-    border-radius: 1rem;
-    padding: 1rem 2rem;
-    font-weight: 400;
-    color: #ffffff9d;
-
-    /* From https://css.glass */
-    background: rgba(255, 255, 255, 0.137);
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(6px);
-    -webkit-backdrop-filter: blur(6px);
-    border: 1px solid rgba(255, 255, 255, 0.29);
-
-    transition: all 200ms ease-in-out;
-}
-
-#links .cards .card .text button:hover {
-    background: rgba(255, 255, 255, 0.288);
-    color: #ffffffb4;
-    cursor: pointer;
 }
 
 @media (min-width: 1080px) {
@@ -157,36 +122,31 @@ body {
         width: min(150rem, 100%);
     }   
 
+    body {
+        background-size: contain;
+    }
+
     section#links .cards {
-        gap: 4rem;
+        gap: 7rem;
     }
 
     section#links .cards .card {
-        width: 50rem;
+        width: 40rem;
         justify-content: center;
     }
 
     section#links .cards .card .text {
         text-align: center;
-        margin-right: -15rem;
+        margin-right: -7rem;
     }
 
     section#links .cards .card .text h2 {
         font-size: 2.5rem;
     }
 
-    section#links .cards .card .text button {
-        font-size: 1.6rem;
-        padding: .8rem 1.5rem;
-    }
-
-    section#links .cards .card .image img.whatsapp {
-        width: 15rem;
+    section#links .cards .card .image .whatsapp,
+    section#links .cards .card .image .site {
+        font-size: 10rem;
         top: -3rem;
-    }
-
-    section#links .cards .card .image img.site {
-        width: 28rem;
-        top: -5rem;
     }
 }
